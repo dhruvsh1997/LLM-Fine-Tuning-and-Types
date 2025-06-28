@@ -35,7 +35,7 @@ The model is trained on questions from these anime series:
 - CUDA-capable GPU (recommended)
 - 8GB+ RAM
 - HuggingFace account (for model access)
-
+- Ubsloth
 ### Install Dependencies
 
 ```bash
@@ -305,6 +305,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgments
 
 - **HuggingFace**: For the SmolLM model and transformers library
+- **Unsloth**: For the SmolLM model and transformers library
 - **theblackcat102**: For the anime understanding dataset
 - **Microsoft**: For the LoRA technique
 - **Anime Community**: For inspiring this project
