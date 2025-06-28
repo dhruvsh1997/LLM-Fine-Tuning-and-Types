@@ -22,7 +22,7 @@ This repository provides a systematic comparison of different fine-tuning approa
 ### Key Features
 
 - **4 Fine-tuning Techniques**: Full, LoRA, QLoRA, and Feature-based approaches
-- **3 Implementation Frameworks**: HuggingFace Transformers, Ollama, and Unsloth
+- **3 Implementation Frameworks**: HuggingFace Transformers, Axolotl, and Unsloth
 - **Comprehensive Evaluation**: Perplexity, ROUGE, and BLEU metrics
 - **Anime QA Dataset**: Specialized dataset covering 13 popular anime series
 - **Production-Ready Code**: Well-documented, modular implementations
@@ -32,15 +32,15 @@ This repository provides a systematic comparison of different fine-tuning approa
 ```
 ├── Full Fine Tuning/
 │   ├── HuggingFace/
-│   ├── Ollama/
+│   ├── Axolotl/
 │   └── Unsloth/
 ├── LoRA Fine Tuning/
 │   ├── HuggingFace/
-│   ├── Ollama/
+│   ├── Axolotl/
 │   └── Unsloth/
 ├── QLoRA Fine Tuning/
 │   ├── HuggingFace/
-│   ├── Ollama/
+│   ├── Axolotl/
 │   └── Unsloth/
 ├── Feature Based Fine Tuning/
 │   └── OpenAI_GPT_JSONL/
@@ -84,11 +84,12 @@ This repository provides a systematic comparison of different fine-tuning approa
 - Advanced training utilities
 - Extensive documentation
 
-### Ollama
-- Local model deployment focus
-- Simplified fine-tuning workflow
-- Optimized for inference
-- Easy model sharing
+### Axolotl
+- Configuration-driven fine-tuning framework
+- Built on top of HuggingFace Transformers
+- Supports multiple training techniques out-of-the-box
+- YAML-based configuration for reproducible experiments
+- Advanced logging and monitoring capabilities
 
 ### Unsloth
 - 2x faster training speeds
@@ -164,6 +165,8 @@ print(f"Using device: {device}")
 2. **Choose your approach**
    ```bash
    cd "QLoRA Fine Tuning/HuggingFace"
+   # or
+   cd "LoRA Fine Tuning/Axolotl"
    ```
 
 3. **Run the notebook**
@@ -217,7 +220,9 @@ training_args = TrainingArguments(
 |-----------|-----------|--------------|---------------|------------|---------|------|
 | Full FT   | HF        | ~12GB        | ~2hrs         | TBD        | TBD     | TBD  |
 | LoRA      | HF        | ~8GB         | ~1.5hrs       | TBD        | TBD     | TBD  |
+| LoRA      | Axolotl   | ~8GB         | ~1.2hrs       | TBD        | TBD     | TBD  |
 | QLoRA     | HF        | ~6GB         | ~1hrs         | TBD        | TBD     | TBD  |
+| QLoRA     | Axolotl   | ~6GB         | ~45min        | TBD        | TBD     | TBD  |
 | QLoRA     | Unsloth   | ~5GB         | ~30min        | TBD        | TBD     | TBD  |
 
 *Results will be updated as experiments are completed*
@@ -235,9 +240,9 @@ training_args = TrainingArguments(
 - QLoRA offers the best efficiency-performance balance
 
 ### Framework Comparison
-- **HuggingFace**: Most comprehensive, best for research
-- **Unsloth**: Fastest training, great for rapid iteration
-- **Ollama**: Best for deployment and inference optimization
+- **HuggingFace**: Most comprehensive, best for research and custom implementations
+- **Axolotl**: Configuration-driven approach, excellent for reproducible experiments
+- **Unsloth**: Fastest training, great for rapid iteration and prototyping
 
 ## 🛣️ Roadmap
 
