@@ -151,7 +151,7 @@ pip install evaluate rouge_score nltk polars torch
 ```python
 import torch
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Using device: {device}")
+print(f"Using device on Current Notebook: {device}")
 ```
 
 ### Quick Start
@@ -191,7 +191,7 @@ bnb_config = BitsAndBytesConfig(
 lora_config = LoraConfig(
     r=16,
     lora_alpha=32,
-    target_modules=["q_proj", "v_proj", "k_proj", "o_proj", 
+    target_modules=["q_proj", "v_proj", "k_proj", "o_proj",  #query, key, value, output, gates
                    "gate_proj", "down_proj", "up_proj"],
     lora_dropout=0.05,
     bias="none",
