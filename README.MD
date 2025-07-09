@@ -17,7 +17,7 @@ A comprehensive repository exploring different fine-tuning techniques for the Sm
 
 ## 🎯 Overview
 
-This repository provides a systematic comparison of different fine-tuning approaches for large language models, specifically focusing on the **SmolLM2-1.7B-Instruct** model. Each technique is implemented across multiple frameworks to provide comprehensive insights into their effectiveness, efficiency, and practical considerations.
+This repository provides a systematic comparison of different fine-tuning approaches for large language models, specifically focusing on the **SmolLM2-1.7B-Instruct** model. Each technique is implemented across multiple frameworks to provide comprehensive insights into their effectiveness, efficiency, and practical considerations. will Explore vLLM as well.
 
 ### Key Features
 
